@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Novo";
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+
+<div class="container mg-top-default">
+    <form>
+        <div class="form-group">
+            <label for="identificar">Identificador</label>
+            <input type="text" class="form-control" id="identificador">
+            <small id="emailHelp" class="form-text text-muted">Ex: "2018/00014"</small>
+        </div>
+        <div class="form-group">
+            <label for="cliente">Cliente</label>
+            <select class="form-control" id="cliente_id">
+                <option>Selecione...</option>
+                <option value="00001">José Bonifácio</option>
+                <option value="00002">Luiz Fernando</option>
+                <option value="00003">Angela Maria</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cliente">Responsável</label>
+            <select class="form-control" id="responsavel_id">
+                <option>Selecione...</option>
+                <option value="00001">Paulo Cezar</option>
+                <option value="00002">Fernando Medeiros</option>
+                <option value="00003">Arthur Augusto</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="valor_causa">Valor causa(R$)</label>
+            <input type="text" class="form-control" id="valor_causa">
+            <small id="valor_causa_help" class="form-text text-muted">Ex: R$ 5.000,00</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary float-right">Registrar</button>
+    </form>
+</div>

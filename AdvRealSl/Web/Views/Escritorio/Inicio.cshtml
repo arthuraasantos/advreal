@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+
+<style>
+    .img-topo {
+        margin-top: 4%;
+        margin-left: 7%;
+    }
+
+    h6{
+        text-align:center;
+    }
+</style>
+
+<div class="container">
+    <div class="img-topo">
+        <img src="~/imagens/justice-banner.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="row-fluid">
+        <br />
+        <h6 class="text-left">Bem vindo, hoje é @DateTime.UtcNow.ToString("dd/MM/yyyy")</h6>
+    </div>
+    <hr />
+    <br />
+    <div class="container">
+        <div class="row">
+            <h6 class="text-center">
+                Andamento dos Processos
+            </h6>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Com alteração</p>
+            </div>
+            <div class="col">
+                Para esta semana
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Hospital Carlos Chagas</div>
+            <div class="col">201800001</div>
+            <div class="col">Farmácia Bonjour</div>
+            <div class="col">201800002</div>
+        </div>
+        
+        <br />
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Fechados</div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">Andamento</div>
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Atrasados</div>
+        </div>
+    </div>
+    
+</div>
+

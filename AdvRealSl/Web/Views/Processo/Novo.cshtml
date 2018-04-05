@@ -1,6 +1,5 @@
 ﻿
 @{
-    ViewData["Title"] = "Novo";
     Layout = "~/Views/Base/_Layout.cshtml";
 }
 
@@ -33,6 +32,26 @@
             <label for="valor_causa">Valor causa(R$)</label>
             <input type="text" class="form-control" id="valor_causa">
             <small id="valor_causa_help" class="form-text text-muted">Ex: R$ 5.000,00</small>
+        </div>
+        <hr />
+        <div class="form-group">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nenhum arquivo vinculado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04">
+                <label class="custom-file-label" for="inputGroupFile04">Vincular arquivos</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Enviar arquivo</button>
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary float-right">Registrar</button>

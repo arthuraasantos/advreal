@@ -1,10 +1,12 @@
-﻿
+﻿footer {
+    clear: both;
+}
 .mg-top-default {
     margin-top: 4%;
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

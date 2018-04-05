@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+<style>
+
+</style>
+<div class="container mg-top-default">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" colspan="1">
+                    <a class="btn btn-primary btn-sm pull-left" href="~/Processo/Novo">
+                        <i class="fa fa-plus"></i>
+                        Novo
+                    </a>
+                </th>
+                <th scope="col" colspan="3" >
+                    <span class="text-center">
+                        Lista de processos
+                    </span>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">Identicação</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Data</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">201800001</td>
+                <td>Hospital Carlos Chagas</td>
+                <td>04/04/2018</td>
+                <td>
+                    <a href="~/Processo/Detalhe" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" onclick="alert('Deseja excluir este processo?');" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">201800002</td>
+                <td>Carmela dos Santos</td>
+                <td>12/04/2018</td>
+                <td>
+                    <a href="~/Processo/Detalhe" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" onclick="alert('Deseja excluir este processo?');" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">201800003</td>
+                <td>Supermecados Kitudo</td>
+                <td>27/04/2018</td>
+                <td>
+                    <a href="~/Processo/Detalhe" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" onclick="alert('Deseja excluir este processo?');" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">201800002</td>
+                <td>Farmácia Bonjour</td>
+                <td>12/06/2018</td>
+                <td>
+                    <a href="~/Processo/Detalhe" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" onclick="alert('Deseja excluir este processo?');" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">201800003</td>
+                <td>Robson da Silva</td>
+                <td>04/10/2018</td>
+                <td>
+                    <a href="~/Processo/Detalhe" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="#" onclick="alert('Deseja excluir este processo?');" class="btn btn-danger btn-sm">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

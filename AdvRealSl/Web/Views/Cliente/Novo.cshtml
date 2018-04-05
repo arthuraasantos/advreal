@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+
+<div class="container mg-top-default">
+    <form>
+        <div class="form-group">
+            <label for="identificar">Nome/Razão Social</label>
+            <input type="text" class="form-control" id="identificador">
+            <small id="emailHelp" class="form-text text-muted">Ex: "AdvReal Advocacia"</small>
+        </div>
+        <div class="form-group">
+            <label for="cpfcnpj">Cpf/Cnpj</label>
+            <input type="text" class="form-control" id="cpfCnpj">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="telefone">
+        </div>
+        <hr />
+        <div class="form-group">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Nenhum arquivo vinculado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-group input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile04">
+                <label class="custom-file-label" for="inputGroupFile04">Vincular arquivos</label>
+            </div>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Enviar arquivo</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary float-right">Registrar</button>
+    </form>
+</div>
+
+

@@ -2,7 +2,7 @@
 
 namespace Web.Controllers
 {
-    public class ProcessosController : Controller
+    public class ProcessoController : Controller
     {
         public IActionResult Lista()
         {
@@ -10,6 +10,11 @@ namespace Web.Controllers
         }
 
         public IActionResult Novo()
+        {
+            return View();
+        }
+
+        public IActionResult Detalhe()
         {
             return View();
         }

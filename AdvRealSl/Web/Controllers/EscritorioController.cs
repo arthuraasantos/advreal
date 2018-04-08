@@ -12,5 +12,10 @@ namespace Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Perfil()
+        {
+            return View();
+        }
     }
 }

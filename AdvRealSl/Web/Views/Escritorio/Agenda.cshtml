@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+
+<style>
+    .img-topo {
+        margin-top: 4%;
+        margin-left: 7%;
+    }
+
+    h6 {
+        text-align: center;
+    }
+</style>
+
+<link rel='stylesheet' href='~/css/fullcalendar.min.css' />
+<script src='~/lib/jquery/jquery.min.js'></script>
+<script src='~/lib/moment/moment.min.js'></script>
+<script src='~/lib/fullCalendar/fullcalendar.js'></script>
+<script src='~/lib/fullCalendar/locale/pt-br.js'></script>
+
+<div class="container pd-top-default">
+    <div class="row">
+        <div id="calendar"></div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+</div>
+
+    
+
+    <script>
+        $(function () {
+
+            $('#calendar').fullCalendar({
+                weekends: false,
+                header: { center: 'month,agendaWeek, list' },
+                themeSystem: 'bootstrap4',
+                height: 450,
+                aspectRatio: 1.8,
+
+                events: [
+                    {
+                        title: 'Reunião HCH',
+                        start: '2018-04-01'
+                    },
+                    {
+                        title: 'Implantação sistema ADVREAL em cliente',
+                        start: '2018-04-06',
+                        end: '2018-04-13'
+                    },
+                    {
+                        title: 'Update Equipe',
+                        start: '2018-04-10T13:30:00',
+                        allDay: false // will make the time show
+                    }
+                ]
+                // put your options and callbacks here
+            })
+
+        });
+    </script>

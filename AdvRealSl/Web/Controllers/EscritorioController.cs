@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
@@ -14,6 +10,16 @@ namespace Web.Controllers
         }
 
         public IActionResult Perfil()
+        {
+            return View();
+        }
+
+        public IActionResult Agenda()
+        {
+            return View();
+        }
+
+        public IActionResult Tarefas()
         {
             return View();
         }

@@ -26,6 +26,10 @@ footer {
     font-size: 11px !important;
 }
 
+.adv-body-full{
+    width:100%;
+}
+
 .counter-badge {
     background: #ffc107;
     margin-right: -5px;

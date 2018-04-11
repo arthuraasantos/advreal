@@ -1,0 +1,44 @@
+﻿
+<form>
+    <div class="row">
+        <h3 class="font-weight-light">Dados principais</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="nome">Nome/Razão Social</label>
+            <input type="text" class="form-control" id="Nome" />
+            <small id="emailHelp" class="form-text text-muted">Ex: "Joaquim Severino"</small>
+        </div>
+        <div class="col-md-6">
+            <label for="nome">Tipo de pessoa</label>
+            <div class="col-md-3">
+                <input type="radio" name="tipo" id="tipof" value="0" checked /> Física
+            </div>
+            <div class="col-md-3">
+                <input type="radio" name="tipo" id="tipoj" value="0" /> Jurídica
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="telefone" />
+        </div>
+        <div class="col-md-4">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="col-md-2">
+            <label for="cpfcnpj">CPF</label>
+            <input type="text" class="form-control" id="cpfcnpj" />
+        </div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+        </div>
+    </div>
+    @Html.Partial("_Endereco")
+
+</form>

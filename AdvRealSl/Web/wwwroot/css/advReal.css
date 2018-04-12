@@ -1,9 +1,10 @@
-﻿body{
-    background-color:rgba(0, 0, 0, 0.37);
+﻿body {
+    background-color: #eef5f9;
+    font-family: "Poppins", sans-serif;
 }
 
 .container-body {
-    background-color: #fff;
+    background-color: #eef5f9;
     border-radius: 10px;
     margin-top: 7px;
 }
@@ -28,6 +29,38 @@ footer {
 
 .adv-body-full{
     width:100%;
+}
+
+.adv-bg-azul {
+    background-color: #1e88e5 !important;
+    
+}
+
+.adv-text-white {
+    color: #fff;
+}
+
+.adv-card-default {
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 0.875em;
+    margin-left: 2%;
+}
+
+.adv-card-warning {
+    background-color: #ffbe61;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.adv-card-success {
+    background-color: #62abff;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    padding: 1.25rem;
+    text-align: center;
 }
 
 .counter-badge {

@@ -5,97 +5,137 @@
 
 <div class="container pd-top-default">
     <form>
-        <div class="form-group">
-            <label for="identificar">Identificador</label>
-            <input type="text" class="form-control" id="identificador" value="2018/00014">
-            <small id="emailHelp" class="form-text text-muted">Ex: "2018/00014"</small>
-        </div>
-        <div class="form-group">
-            <label for="cliente">Cliente</label>
-            <select class="form-control" id="cliente_id">
-                <option>Selecione...</option>
-                <option value="00001" selected>José Bonifácio</option>
-                <option value="00002">Luiz Fernando</option>
-                <option value="00003">Angela Maria</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="cliente">Responsável</label>
-            <select class="form-control" id="responsavel_id">
-                <option>Selecione...</option>
-                <option value="00001" selected>Paulo Cezar</option>
-                <option value="00002">Fernando Medeiros</option>
-                <option value="00003">Arthur Augusto</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="valor_causa">Valor causa(R$)</label>
-            <input type="text" class="form-control" id="valor_causa" value="5000">
-            <small id="valor_causa_help" class="form-text text-muted">Ex: R$ 5.000,00</small>
-        </div>
-        <div class="form-group">
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <td colspan="8" class="text-center">Arquivos
-                            <a href="#" class="btn btn-primary btn-sm float-right" title="Enviar 'todos' os arquivos por email para o cliente do processo">
-                            Enviar arquivos p/ cliente
-                            <i class="fa fa-envelope"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th colspan="1"></th>
-                        <th colspan="5">Descrição</th>
-                        <th colspan="1">Data upload</th>
-                        <th colspan="1">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="1">
-                            ...
-                        </td>
-                        <td colspan="5">Petição inicial.pdf</td>
-                        <td colspan="1">04/04/2018 09:25</td>
-                        <td colspan="1">
-                            <a href="#" class="btn btn-primary btn-sm" title="Enviar por email para o cliente do processo">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="1">
-                            ...
-                        </td>
-                        <td colspan="5">Copia_sentenca.pdf</td>
-                        <td colspan="1">04/04/2018 09:30</td>
-                        <td colspan="1">
-                            <a href="#" class="btn btn-primary btn-sm" title="Enviar por email para o cliente do processo">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-        <div class="form-group input-group">
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile04">
-                <label class="custom-file-label" for="inputGroupFile04">Vincular arquivos</label>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="identificar">Identificador</label>
+                <input type="text" class="form-control" id="identificador" value="2018/00014">
             </div>
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Enviar arquivo</button>
+            <div class="col-md-6">
+                <label for="cliente">Cliente</label>
+                <select class="form-control" id="cliente_id">
+                    <option>Selecione...</option>
+                    <option value="00001" selected>José Bonifácio</option>
+                    <option value="00002">Luiz Fernando</option>
+                    <option value="00003">Angela Maria</option>
+                </select>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="cliente">Responsável</label>
+                <select class="form-control" id="responsavel_id">
+                    <option>Selecione...</option>
+                    <option value="00001" selected>Paulo Cezar</option>
+                    <option value="00002">Fernando Medeiros</option>
+                    <option value="00003">Arthur Augusto</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="valor_causa">Valor causa(R$)</label>
+                <input type="text" class="form-control" id="valor_causa" value="5000">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="comarca">Comarca</label>
+                <input type="text" class="form-control" id="comarca">
+            </div>
+            <div class="col-md-6">
+                <label for="numero_vara">Numero vara/juizado</label>
+                <input type="text" class="form-control" id="numero_vara">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="reu_nome">Nome do réu</label>
+                <input type="text" class="form-control" id="reu_nome">
+            </div>
+            <div class="col-md-6">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" id="tipo">
+                    <option selected>Selecione...</option>
+                    <option value="00001">Civel</option>
+                    <option value="00002">Previdenciária</option>
+                    <option value="00003">Trabalhista</option>
+                    <option value="00004">Outro</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="clearfix">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <table class="table">
+                        <thead class="table-dark">
+                            <tr>
+                                <td colspan="8" class="text-center">
+                                    Arquivos
+                                    <a href="#" class="btn btn-primary btn-sm float-right" title="Enviar 'todos' os arquivos por email para o cliente do processo">
+                                        Enviar arquivos p/ cliente
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1"></th>
+                                <th colspan="5">Descrição</th>
+                                <th colspan="1">Data upload</th>
+                                <th colspan="1">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="1">
+                                    ...
+                                </td>
+                                <td colspan="5">Petição inicial.pdf</td>
+                                <td colspan="1">04/04/2018 09:25</td>
+                                <td colspan="1">
+                                    <a href="#" class="btn btn-primary btn-sm" title="Enviar por email para o cliente do processo">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    ...
+                                </td>
+                                <td colspan="5">Copia_sentenca.pdf</td>
+                                <td colspan="1">04/04/2018 09:30</td>
+                                <td colspan="1">
+                                    <a href="#" class="btn btn-primary btn-sm" title="Enviar por email para o cliente do processo">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile04">
+                        <label class="custom-file-label" for="inputGroupFile04">Vincular arquivos</label>
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Enviar arquivo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary float-right">Salvar</button>
             </div>
         </div>
         <br />
-        
+
     </form>
 </div>
 

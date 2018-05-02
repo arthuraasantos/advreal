@@ -74,3 +74,26 @@ footer {
     border-color: rgba(0, 0, 0, 0.37);
 }
 
+
+
+.sign-up-user-bg {
+    background: url(../imagens/sign-up-background.jpg) 50% 50% no-repeat !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-user-bg {
+    background: url(../imagens/signup-bg.jpg) 50% 50% no-repeat !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.user-new-card-mg {
+    margin-left: 25%;
+    margin-top: 7%;
+    margin-right: 26%;
+}
+
+.user-login-card-mg {
+    margin-left: 30%;
+    margin-top: 7%;
+    margin-right: 30%;
+}

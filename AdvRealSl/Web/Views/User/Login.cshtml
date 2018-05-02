@@ -1,0 +1,51 @@
+﻿
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Criar conta</title>
+
+    <!-- Dependencias CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/advReal.css" crossorigin="anonymous">
+</head>
+<body class="login-user-bg container-body">
+    <div class="card user-login-card-mg">
+        <div class="card-header">
+            <h5 class="card-title text-center">Informe seus dados</h5>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <div>&nbsp;</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <a href="/User/New">Criar conta</a>
+                <button type="submit" class="btn btn-primary float-right">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="row-fluid">&nbsp;</div>
+
+        <div class="container">
+            <p class="text-secondary text-center">© Adv Real. Todos os direitos reservados - 2018 </p>
+
+        </div>
+    </footer>
+</body>
+</html>

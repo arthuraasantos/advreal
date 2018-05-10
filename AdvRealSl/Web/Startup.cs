@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
-using Web.Domain;
+using Web.Application;
+using Web.Domain.Users;
+using Web.Entities.Domain.Users.Interfaces;
 using Web.Infra.EF;
+using Web.Infra.Security;
 
 namespace Web
 {
@@ -53,6 +55,8 @@ namespace Web
             .AddDefaultTokenProviders();
 
             services.ConfigureApplicationCookie(options => options.LoginPath = "/User/Login");
+
+            services = DependencyInjection(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,14 +68,26 @@ namespace Web
             }
 
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routes => 
             {
                 routes.MapRoute(
                         name: "default",
-                        template: "{controller=Escritorio}/{action=Inicio}/{id?}");
+                        template: "{controller=Office}/{action=Start}/{id?}");
             });
 
 
+        }
+
+        private IServiceCollection DependencyInjection(IServiceCollection services)
+        {
+            //Services 
+            services.AddScoped<IUserService, UserService>();
+
+            // Infra
+            services.AddScoped<ISecurity, Security>();
+
+            return services;
         }
     }
 }

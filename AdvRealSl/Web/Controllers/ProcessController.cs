@@ -2,19 +2,19 @@
 
 namespace Web.Controllers
 {
-    public class ProcessoController : Controller
+    public class ProcessController : Controller
     {
-        public IActionResult Lista()
+        public IActionResult Start()
         {
             return View();
         }
 
-        public IActionResult Novo()
+        public IActionResult New()
         {
             return View();
         }
 
-        public IActionResult Detalhe()
+        public IActionResult Details()
         {
             return View();
         }

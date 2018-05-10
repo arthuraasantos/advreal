@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
-using Web.Domain;
+using Web.Domain.Users;
 
 namespace Web.Infra.EF
 {

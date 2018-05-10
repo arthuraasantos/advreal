@@ -1,0 +1,27 @@
+﻿@model Web.Entities.ViewModels.UserProfileViewModel
+@{
+    Layout = "~/Views/Base/_Layout.cshtml";
+}
+
+<div class="container pd-top-default">
+    <form action="/User/Profile" method="post">
+        <input type="hidden" id="UserId" name="UserId" value="@Model.UserId"/>
+        <div class="form-group col-md-4">
+            <label for="identificar">Nome</label>
+            <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.FirstName">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="identificar">Sobrenome</label>
+            <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.LastName">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" value="@Model.Email" required>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <button type="submit" class="btn btn-primary float-right">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>

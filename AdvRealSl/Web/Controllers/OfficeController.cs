@@ -4,24 +4,24 @@ using Microsoft.AspNetCore.Mvc;
 namespace Web.Controllers
 {
     [Authorize]
-    public class EscritorioController : Controller
+    public class OfficeController : Controller
     {
-        public IActionResult Inicio()
+        public IActionResult Start()
         {
             return View();
         }
 
-        public IActionResult Perfil()
+        public IActionResult Profile()
         {
             return View();
         }
 
-        public IActionResult Agenda()
+        public IActionResult Calendar()
         {
             return View();
         }
 
-        public IActionResult Tarefas()
+        public IActionResult Tasks()
         {
             return View();
         }

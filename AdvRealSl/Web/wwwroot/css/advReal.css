@@ -1,10 +1,14 @@
-﻿body {
+﻿
+
+
+
+body {
     background-color: #eef5f9;
     font-family: "Poppins", sans-serif;
 }
 
 .container-body {
-    background-color: #eef5f9;
+    background-color: #f7f8f9;
     border-radius: 10px;
     margin-top: 7px;
 }
@@ -18,7 +22,7 @@ footer {
 }
 
 .footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -81,9 +85,12 @@ footer {
     font-family: "Poppins", sans-serif;
 }
 
+
+
 .login-user-bg {
     background: url(../imagens/signup-bg.jpg) 50% 50% no-repeat !important;
     font-family: "Poppins", sans-serif;
+    padding: 3%;
 }
 
 .user-new-card-mg {
@@ -93,7 +100,22 @@ footer {
 }
 
 .user-login-card-mg {
-    margin-left: 30%;
+    margin-left: 40%;
     margin-top: 7%;
-    margin-right: 30%;
+    margin-right: 40%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    .login-user-bg {
+        margin-top: 0;
+    }
+}
+
+.mg-5{
+    margin-left: 22px;
 }

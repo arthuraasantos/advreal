@@ -20,4 +20,9 @@
     <None Include="wwwroot\imagens\martelologo.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infra\EF\DbMaps\" />
+    <Folder Include="Infra\EF\Repositories\" />
+  </ItemGroup>
+
 </Project>

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Web.Domain.Users;
+using Web.Entities.Domain.Logs.Enums;
 using Web.Entities.Domain.Users.Interfaces;
 using Web.Entities.ViewModels;
 using Web.Infra.Security;
@@ -56,12 +57,22 @@ namespace Web.Application
             if (!string.IsNullOrWhiteSpace(userViewModel.LastName))
                 user.LastName = userViewModel.LastName;
 
-            _userManager.UpdateAsync(user);
+            var updateResult = _userManager.UpdateAsync(user).Result;
+            if (!updateResult.Succeeded)
+                throw new Exception($"Erro ao salvar {updateResult.Errors.ToString()}");
+
+            
+            
         }
 
         public User GetProfile(string email)
         {
             throw new NotImplementedException();
+        }
+
+        private void RegisterEvent(LogType type, string message)
+        {
+
         }
     }
 }

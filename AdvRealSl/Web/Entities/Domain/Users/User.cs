@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
+using Web.Entities.Domain.Logs;
 
 namespace Web.Domain.Users
 {
-    public class User: IdentityUser<Guid>
+    public class User: IdentityUser<Guid>, ILog
     {
         [Obsolete("Para o EF, não utilizar",true)]
         public User()

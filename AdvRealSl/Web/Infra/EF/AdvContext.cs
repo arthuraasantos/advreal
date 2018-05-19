@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using Web.Domain.Users;
+using Web.Entities.Domain.Logs;
+using Web.Infra.Logs;
 
 namespace Web.Infra.EF
 {
@@ -13,6 +15,8 @@ namespace Web.Infra.EF
         {
 
         }
-        
+
+        public DbSet<Log> Logs { get; set; }
+
     }
 }

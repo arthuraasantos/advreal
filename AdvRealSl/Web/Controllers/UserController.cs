@@ -120,7 +120,7 @@ namespace Web.Controllers
         public async Task<IActionResult> Logout()
         {
             await _userService.SignOut();
-            return Ok();
+            return RedirectToAction("Login");
         }
         #endregion
 

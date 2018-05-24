@@ -1,26 +1,33 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Web.Domain.Users;
 using Web.Entities.Domain.Logs.Enums;
+using Web.Entities.Domain.Logs.Interfaces;
 using Web.Entities.Domain.Users.Interfaces;
 using Web.Entities.ViewModels;
+using Web.Infra.EF;
 using Web.Infra.Security;
 using Web.Infra.Validations;
 
-namespace Web.Application
+namespace Web.Services
 {
     public class UserService: IUserService
     {
         private readonly SignInManager<User> _signInManager;
         private UserManager<User> _userManager;
         private ISecurity _security;
+        private ILogService<User> _logService;
 
-        public UserService(SignInManager<User> signInManager, UserManager<User> userManager, ISecurity security)
+        public UserService(SignInManager<User> signInManager, UserManager<User> userManager, ISecurity security,
+                           ILogService<User> logService
+            )
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _security = security;
+            _logService = logService;
         }
 
         public async Task<User> GetByEmail(string email)
@@ -29,7 +36,13 @@ namespace Web.Application
         public async Task<SignInResult> SignIn(User user, string password, bool remember)
         {
             var hash = _security.Criptography(password);
-            return await _signInManager.PasswordSignInAsync(user, hash, remember, true);
+            var signInResult = await _signInManager.PasswordSignInAsync(user, hash, remember, true);
+
+            if (signInResult.Succeeded)
+            {
+                RegisterLog(LogType.Event, user, user, "O usuário logou no sistema");
+            }
+            return signInResult;
         }
             
         public Task SignOut()
@@ -42,12 +55,17 @@ namespace Web.Application
 
             var hash = _security.Criptography(password);
             user.SetPassword(hash);
-            return await _userManager.CreateAsync(user, hash);
+            var createResult = await _userManager.CreateAsync(user, hash);
+
+            if (createResult.Succeeded)
+                RegisterLog(LogType.Creation, user, user, "Criado um usuário");
+
+            return createResult;
         }
 
         public void UpdateProfile(UserProfileViewModel userViewModel)
         {
-            var user = GetByEmail(userViewModel.Email).Result;
+            var user = _userManager.FindByIdAsync(userViewModel.UserId.ToString()).Result;
             if (user == null)
                 return;
 
@@ -61,18 +79,19 @@ namespace Web.Application
             if (!updateResult.Succeeded)
                 throw new Exception($"Erro ao salvar {updateResult.Errors.ToString()}");
 
-            
-            
+            RegisterLog(LogType.Change, user, user, "Usuário alterado");
         }
 
-        public User GetProfile(string email)
+        private void RegisterLog(LogType logType, User entity, User executionUser, string message)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                _logService.Register(logType, entity, executionUser, message);
+            }
+            catch
+            {
 
-        private void RegisterEvent(LogType type, string message)
-        {
-
+            }
         }
     }
 }

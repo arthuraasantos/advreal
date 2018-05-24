@@ -11,9 +11,10 @@ using Web.Infra.EF;
 namespace Web.Migrations
 {
     [DbContext(typeof(AdvContext))]
-    partial class AdvContextModelSnapshot : ModelSnapshot
+    [Migration("20180519203304_TableOffice")]
+    partial class TableOffice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

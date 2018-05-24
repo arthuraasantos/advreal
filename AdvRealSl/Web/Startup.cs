@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Web.Application;
+using Web.Services;
 using Web.Domain.Users;
 using Web.Entities.Domain.Users.Interfaces;
 using Web.Infra.EF;
 using Web.Infra.Security;
+using Web.Entities.Domain.Logs.Interfaces;
+using Web.Infra.Logs;
 
 namespace Web
 {
@@ -81,12 +83,18 @@ namespace Web
 
         private IServiceCollection DependencyInjection(IServiceCollection services)
         {
+            //Context
+            services.AddScoped(typeof(IAdvContext), provider => provider.GetService<AdvContext>());
+
             //Services 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ILogService<User>, LogService<User>>();
 
             // Infra
             services.AddScoped<ISecurity, Security>();
 
+            // Repositories
+            services.AddScoped<ILogRepository, LogRepository>();
             return services;
         }
     }
